@@ -9,6 +9,8 @@
       Facere, commodi corrupti ipsam neque totam reprehenderit laboriosam
       laborum veniam est quo, repellat saepe impedit labore?
     </p>
+    <p>api response:</p>
+    <div>{{ data }}</div>
   </div>
 </template>
 
@@ -21,3 +23,13 @@ p {
   margin: 20px 0;
 }
 </style>
+
+<script setup>
+// const { data } = await useFetch('/api/ninja?name=mario')
+// const { data } = await useFetch('/api/ninja?name=mario', {
+//   method: 'post',
+//   body: {age: 30}
+// })
+
+const { data } = await useFetch("/api/ninja");
+</script>
